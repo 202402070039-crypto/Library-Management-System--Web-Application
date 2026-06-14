@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MITAOE Library — Student Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo">ML</div><div><div class="site-title">MITAOE Library</div><div class="site-sub">Student Login</div></div></div>
+      <nav><ul><li><a href="index.html">Home</a></li><li><a href="student-signup.html" class="badge">Sign Up</a></li></ul></nav>
+    </header>
+
+    <main>
+      <section class="form" style="max-width:480px;margin:2rem auto">
+        <h2>Student Login</h2>
+        <p class="small">Login with Student ID & password.</p>
+        <form id="student-login-form">
+          <label for="login-stud-id">Student ID</label>
+          <input id="login-stud-id" class="input" type="text" placeholder="202402070019" required>
+
+          <label for="login-stud-pass">Password</label>
+          <input id="login-stud-pass" class="input" type="password" placeholder="Password" required>
+
+          <p style="margin-top:10px;">
+            <a href="student-forgot.html" style="color:#6b21a8;font-weight:700;text-decoration:none;">Forgot Password?</a>
+          </p>
+
+          <button class="btn" type="submit">Login</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

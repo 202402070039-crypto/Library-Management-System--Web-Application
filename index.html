@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MITAOE Library — Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <div class="brand">
+        <div class="logo">ML</div>
+        <div>
+          <div class="site-title">MITAOE Library</div>
+          <div class="site-sub">Knowledge Hub • Browse • Issue</div>
+        </div>
+      </div>
+
+      <nav role="navigation">
+        <ul>
+          <li><a href="index.html" class="primary">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="issue.html">Issue / Return</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="badge">Staff Login</a></li>
+          <li><a href="student-login.html" class="badge">Student Login</a></li>
+          <li id="student-info" style="margin-left:8px;color:var(--muted)"></li>
+          <li id="staff-info" style="margin-left:8px;color:var(--muted)"></li>
+          <li><button id="student-logout-btn" class="btn ghost" style="display:none">Student Logout</button></li>
+          <li><button id="logout-btn" class="btn ghost" style="display:none">Staff Logout</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <article class="hero-card">
+          <h1>Welcome to MITAOE Library</h1>
+          <p class="kv">Modern, beautiful library portal. Sign up as student & login to issue books. Staff can manage issued records.</p>
+          <div style="margin-top:1rem" class="center">
+            <a class="btn" href="books.html">Browse Books</a>
+            <a class="btn ghost" href="issue.html" style="margin-left:.8rem">Issue / Return</a>
+          </div>
+        </article>
+
+        <aside class="hero-card">
+          <h3>Library at a glance</h3>
+          <p class="kv"><strong>~18</strong> curated books across categories</p>
+          <p class="kv"><strong>Roles:</strong> Student (issue from books), Staff (manage issuances)</p>
+        </aside>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <h3>Search & Filter</h3>
+          <p class="kv">Find books quickly by title, author, ISBN or category.</p>
+        </div>
+        <div class="feature">
+          <h3>Auto Issue</h3>
+          <p class="kv">Students issue books directly. Staff can also issue or return from the management page.</p>
+        </div>
+        <div class="feature">
+          <h3>Local Persistence</h3>
+          <p class="kv">Everything saved in localStorage so you can demo offline.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">© 2025 MITAOE Library</footer>
+  </div>
+</body>
+</html>

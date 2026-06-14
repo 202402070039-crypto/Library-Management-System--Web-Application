@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MITAOE Library — Student Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo">ML</div><div><div class="site-title">MITAOE Library</div><div class="site-sub">Register</div></div></div>
+      <nav><ul><li><a href="index.html">Home</a></li><li><a href="student-login.html" class="badge">Login</a></li></ul></nav>
+    </header>
+
+    <main>
+      <section class="form" style="max-width:520px;margin:2rem auto">
+        <h2>Create Student Account</h2>
+        <p class="small">Enter your MITAOE student ID and a simple password (min 4 chars).</p>
+        <form id="student-signup-form">
+          <label for="signup-stud-id">Student ID</label>
+          <input id="signup-stud-id" class="input" type="text" placeholder="e.g. 202402070019" required>
+
+          <label for="signup-stud-name">Full Name</label>
+          <input id="signup-stud-name" class="input" type="text" placeholder="Full name" required>
+
+          <label for="signup-stud-email">Email</label>
+          <input id="signup-stud-email" class="input" type="email" placeholder="you@mitaoe.ac.in" required>
+
+          <label for="signup-stud-pass">Password (min 4 chars)</label>
+          <input id="signup-stud-pass" class="input" type="password" placeholder="Create password" required>
+
+          <button class="btn" type="submit">Create Account</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MITAOE Library — My Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Header - keep old navbar layout but classes control visibility -->
+    <header class="header">
+      <div class="brand"><div class="logo">ML</div><div><div class="site-title">MITAOE Library</div><div class="site-sub">Student Dashboard</div></div></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="issue.html">Issue / Return</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-staff"><a href="login.html" class="badge">Staff Login</a></li>
+          <li class="nav-student"><a href="student-login.html" class="badge">Student Login</a></li>
+          <li id="student-info" style="margin-left:8px;color:var(--muted)"></li>
+          <li id="staff-info" style="margin-left:8px;color:var(--muted)"></li>
+          <li><button id="student-logout-btn" class="btn ghost" style="display:none">Student Logout</button></li>
+          <li><button id="logout-btn" class="btn ghost" style="display:none">Staff Logout</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <article class="hero-card">
+          <h2>Your Issued Books</h2>
+          <p class="small">Below are books currently issued to your Student ID. Click <strong>Request Return</strong> to ask the library staff to mark the book as returned after you hand the book in physically.</p>
+          <div style="margin-top:1rem" class="center">
+            <a class="btn" href="books.html">Browse Books</a>
+            <a class="btn ghost" href="index.html" style="margin-left:.6rem">Home</a>
+          </div>
+        </article>
+
+        <aside class="hero-card">
+          <h3>Quick Info</h3>
+          <p class="kv">Requests are sent to staff. The dashboard will show “Request Sent” after submitting. Staff will approve return from their panel.</p>
+        </aside>
+      </section>
+
+      <section class="table-card" aria-labelledby="my-issued">
+        <h3 id="my-issued">My Issued Books</h3>
+        <table class="table">
+          <thead><tr><th>Book ID</th><th>Title</th><th>Issue Date</th><th>Action</th></tr></thead>
+          <tbody id="student-issued-tbody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">© MITAOE Library</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MITAOE Library — Books</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo">ML</div><div><div class="site-title">MITAOE Library</div><div class="site-sub">Books</div></div></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html" class="primary">Books</a></li>
+          <li><a href="issue.html">Issue / Return</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-staff"><a href="login.html" class="badge">Staff Login</a></li>
+          <li class="nav-student"><a href="student-login.html" class="badge">Student Login</a></li>
+          <li id="student-info" style="margin-left:8px;color:var(--muted)"></li>
+          <li id="staff-info" style="margin-left:8px;color:var(--muted)"></li>
+          <li><button id="student-logout-btn" class="btn ghost" style="display:none">Student Logout</button></li>
+          <li><button id="logout-btn" class="btn ghost" style="display:none">Staff Logout</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="table-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+          <h2>Available Books</h2>
+          <form id="search-form" style="display:flex;gap:.5rem;align-items:center">
+            <input id="search-input" class="input" type="search" placeholder="Search by title, author or ISBN">
+            <select id="category-select" class="select"></select>
+            <button class="btn" type="submit">Search</button>
+            <a class="btn ghost" href="books.html">Reset</a>
+          </form>
+        </div>
+
+        <table class="table" role="table">
+          <thead>
+            <tr><th>Title</th><th>Author</th><th>Category</th><th>ISBN</th><th>Status</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="books-tbody"></tbody>
+        </table>
+      </section>
+
+      <!-- tiny CTA for logged-in students to go to dashboard (student-only) -->
+      <section class="small student-only" style="margin-top:1rem">
+        <div class="hero-card">
+          <p class="kv">Want to manage your issued books? <a href="student-dashboard.html" style="color:var(--accent1);font-weight:700">Open My Dashboard</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">© MITAOE Library</footer>
+  </div>
+</body>
+</html>

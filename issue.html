@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>MITAOE Library — Issue / Return</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+      <div class="brand">
+        <div class="logo">ML</div>
+        <div>
+          <div class="site-title">MITAOE Library</div>
+          <div class="site-sub">Issue / Return</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="issue.html" class="primary">Issue / Return</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+          <!-- Staff Login Link -->
+          <li class="nav-staff"><a href="login.html" class="badge">Staff Login</a></li>
+
+          <!-- Student Login Link -->
+          <li class="nav-student"><a href="student-login.html" class="badge">Student Login</a></li>
+
+          <!-- Logged-in info -->
+          <li id="student-info" style="margin-left:8px;color:var(--muted)"></li>
+          <li id="staff-info" style="margin-left:8px;color:var(--muted)"></li>
+
+          <!-- Logout Buttons -->
+          <li>
+            <button id="student-logout-btn" class="btn ghost" style="display:none;">
+              Student Logout
+            </button>
+          </li>
+
+          <li>
+            <button id="logout-btn" class="btn ghost" style="display:none;">
+              Staff Logout
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- ===================== STAFF ONLY SECTION ===================== -->
+      <section class="row staff-only" style="margin-top:1rem;">
+        
+        <!-- Staff Issue Form -->
+        <div class="form">
+          <h2>Issue a Book (Staff)</h2>
+          <form id="issue-form">
+
+            <label for="f-student-id">Student ID</label>
+            <input id="f-student-id" class="input" type="text" placeholder="202402070019" required>
+
+            <label for="f-student-name">Student Name</label>
+            <input id="f-student-name" class="input" type="text" placeholder="Full Name" required>
+
+            <label for="f-book-isbn">Book ISBN or Book ID</label>
+            <input id="f-book-isbn" class="input" type="text" placeholder="978-013 or B001" required>
+            
+            <button class="btn" type="submit">Issue Book (Staff)</button>
+          </form>
+        </div>
+
+        <!-- Staff Return Form -->
+        <div class="form">
+          <h2>Return a Book (Staff)</h2>
+          <form id="return-form">
+
+            <label for="r-student-id">Student ID</label>
+            <input id="r-student-id" class="input" type="text" placeholder="202402070019">
+
+            <label for="r-book-isbn">Book ISBN or Book ID</label>
+            <input id="r-book-isbn" class="input" type="text" placeholder="978-013 or B001">
+
+            <button class="btn ghost" type="submit">Return Book (Staff)</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- STAFF ISSUED BOOKS TABLE -->
+      <section class="table-card staff-only" style="margin-top:1rem;">
+        <h3>Issued Books (Staff View)</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Book ID</th>
+              <th>Title</th>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Issue Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="issued-tbody"></tbody>
+        </table>
+      </section>
+
+      <!-- STAFF RETURN REQUESTS -->
+      <section class="table-card staff-only" style="margin-top:1rem;">
+        <h3>Pending Return Requests</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Book ID</th>
+              <th>Title</th>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Request Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="return-requests-tbody"></tbody>
+        </table>
+      </section>
+
+      <!-- ===================== STUDENT ONLY SECTION ===================== -->
+      <section class="table-card student-only" style="margin-top:1rem;">
+        <h3>Your Issued Books</h3>
+        <p class="small">Request a return from here. Staff will process your request.</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Book ID</th>
+              <th>Title</th>
+              <th>Issue Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="student-issued-tbody"></tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <footer class="footer">© MITAOE Library</footer>
+
+  </div>
+</body>
+</html>
